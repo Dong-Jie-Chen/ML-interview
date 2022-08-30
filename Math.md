@@ -7,44 +7,68 @@
 1. What is an inverse matrix?
 1. If inverse of a matrix exists, how to calculate it?
 1. What is the determinant of a square matrix? How is it calculated (Laplace expansion)? What is the connection of determinant to eigenvalues?
-1. Discuss span and linear dependence.
-1. What is Ax = b? When does Ax =b has a unique solution? 
-1. In Ax = b, what happens when A is fat or tall?
-1. When does inverse of A exist?
-1. What is a norm? What is L1, L2 and L infinity norm?
-1. What are the conditions a norm has to satisfy?
-1. Why is squared of L2 norm preferred in ML than just L2 norm?
-1. When L1 norm is preferred over L2 norm?
-1. Can the number of nonzero elements in a vector be defined as L0 norm? If no, why?
-1. What is Frobenius norm?
-1. What is a diagonal matrix? (D_i,j = 0 for i != 0)
-1. Why is multiplication by diagonal matrix computationally cheap? How is the multiplication different for square vs. non-square diagonal matrix?
-1. At what conditions does the inverse of a diagonal matrix exist? (square and all diagonal elements non-zero)
-1. What is a symmetrix matrix? (same as its transpose)
-1. What is a unit vector?
-1. When are two vectors x and y orthogonal? (x.T * y = 0)
-1. At R^n what is the maximum possible number of orthogonal vectors with non-zero norm?
-1. When are two vectors x and y orthonormal? (x.T * y = 0 and both have unit norm)
-1. What is an orthogonal matrix? Why is computationally preferred? (a square matrix whose rows are mutually orthonormal and columns are mutually orthonormal.)
-1. What is eigendecomposition, eigenvectors and eigenvalues?
-1. How to find eigen values of a matrix?
-1. Write the eigendecomposition formula for a matrix. If the matrix is real symmetric, how will this change?
-1. Is the eigendecomposition guaranteed to be unique? If not, then how do we represent it?
-1. What are positive definite, negative definite, positive semi definite and negative semi definite matrices?
-1. What is SVD? Why do we use it? Why not just use ED?
-1. Given a matrix A, how will you calculate its SVD?
-1. What are singular values, left singulars and right singulars?
-1. What is the connection of SVD of A with functions of A?
-1. Why are singular values always non-negative?
-1. What is the Moore Penrose pseudo inverse and how to calculate it?
-1. If we do Moore Penrose pseudo inverse on Ax = b, what solution is provided is A is fat? Moreover, what solution is provided if A is tall?
-1. Which matrices can be decomposed by ED? (Any NxN square matrix with N linearly independent eigenvectors)
-1. Which matrices can be decomposed by SVD? (Any matrix; V is either conjugate transpose or normal transpose depending on whether A is complex or real)
-1. What is the trace of a matrix?
-1. How to write Frobenius norm of a matrix A in terms of trace?
-1. Why is trace of a multiplication of matrices invariant to cyclic permutations?
-1. What is the trace of a scalar?
-1. Write the frobenius norm of a matrix in terms of trace?
+    
+    det(A) = λ1 · λ2 ····· λn the determinant is the product of the eigenvalues.
+3. Discuss span and linear dependence.
+
+  linear dependent: solve Ax=0
+5. What is Ax = b? When does Ax =b has a unique solution? 
+
+  rank(A)=n
+7. In Ax = b, what happens when A is fat or tall?
+
+  fat: 0 solution or infinite solution. tall: any solution
+  
+9. When does inverse of A exist?
+
+
+  If the Det(A) is non zero then A^-1 exists. 
+11. What is a norm? What is L1, L2 and L infinity norm?
+13. What are the conditions a norm has to satisfy?
+
+  non-negative
+16. Why is squared of L2 norm preferred in ML than just L2 norm?
+
+The squared Euclidean norm is widely used in machine learning partly because it can be calculated with the vector operation xTx.
+18. When L1 norm is preferred over L2 norm?
+
+the L2 norm squares values, so it increases the cost of outliers exponentially; the L1 norm only takes the absolute value, so it considers them linearly.
+
+20. Can the number of nonzero elements in a vector be defined as L0 norm? If no, why?
+21. What is Frobenius norm?
+
+cycle through all matrix entries, add their squares, and then take the square root
+23. What is a diagonal matrix? (D_i,j = 0 for i != 0)
+24. Why is multiplication by diagonal matrix computationally cheap? How is the multiplication different for square vs. non-square diagonal matrix?
+ 
+!!!!!
+27. At what conditions does the inverse of a diagonal matrix exist? (square and all diagonal elements non-zero)
+28. What is a symmetrix matrix? (same as its transpose)
+29. What is a unit vector?
+30. 
+31. When are two vectors x and y orthogonal? (x.T * y = 0)
+32. At R^n what is the maximum possible number of orthogonal vectors with non-zero norm?
+33. When are two vectors x and y orthonormal? (x.T * y = 0 and both have unit norm)
+34. What is an orthogonal matrix? Why is computationally preferred? (a square matrix whose rows are mutually orthonormal and columns are mutually orthonormal.)
+35. What is eigendecomposition, eigenvectors and eigenvalues?
+36. How to find eigen values of a matrix?
+37. Write the eigendecomposition formula for a matrix. If the matrix is real symmetric, how will this change?
+38. Is the eigendecomposition guaranteed to be unique? If not, then how do we represent it?
+39. What are positive definite, negative definite, positive semi definite and negative semi definite matrices?
+40. What is SVD? Why do we use it? Why not just use ED?
+41. Given a matrix A, how will you calculate its SVD?
+42. What are singular values, left singulars and right singulars?
+43. What is the connection of SVD of A with functions of A?
+44. Why are singular values always non-negative?
+45. What is the Moore Penrose pseudo inverse and how to calculate it?
+46. If we do Moore Penrose pseudo inverse on Ax = b, what solution is provided is A is fat? Moreover, what solution is provided if A is tall?
+47. Which matrices can be decomposed by ED? (Any NxN square matrix with N linearly independent eigenvectors)
+48. Which matrices can be decomposed by SVD? (Any matrix; V is either conjugate transpose or normal transpose depending on whether A is complex or real)
+49. What is the trace of a matrix?
+50. How to write Frobenius norm of a matrix A in terms of trace?
+51. Why is trace of a multiplication of matrices invariant to cyclic permutations?
+52. What is the trace of a scalar?
+53. Write the frobenius norm of a matrix in terms of trace?
 
 ## Numerical Optimization
 1. What is underflow and overflow? 
